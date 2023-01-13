@@ -1,0 +1,55 @@
+---
+import Container from "./Container.astro"
+
+const partner =
+[
+    {
+        image:'danial.webp',
+        name:'Danial Def',
+        cases:'301 cases'
+    },
+    {
+        image:'sanfole.webp',
+        name:'Sanfole',
+        cases:'850 cases'
+    },
+    {
+        image:'cesforila.webp',
+        name:'Cesforila',
+        cases:'470 cases'
+    },
+    {
+        image:'collen.webp',
+        name:'Collen',
+        cases:'180 cases'
+    },
+    {
+        image:'haldone.webp',
+        name:'Haldone',
+        cases:'212 cases'
+    },
+    {
+        image:'nik.webp',
+        name:'Nik Jeo',
+        cases:'350 cases'
+    }
+]
+
+---
+
+<Container>
+    <h2 class="text-5xl text-white text-center">Our Team</h2>
+    <section class="grid grid-cols-3 gap-x-8 gap-y-6 mt-20">
+        {partner.map(({image,name,cases}) =>(
+            <a href="#" class=" hover:bg-primary border border-transparent rounded-lg hover:text-black transition duration-500">
+                <article class="flex flex-row p-4 gap-x-4">
+                    <img src={image} alt="partner" class="aspect-[68/68]">
+                    <div class="flex flex-col gap-y-1">
+                        <h3 class="text-white font-black">{name}</h3>
+                        <h4 class="text-white">{cases}</h4>
+                    </div>
+                </article>
+            </a>
+            ))}
+    </section>
+</Container>
