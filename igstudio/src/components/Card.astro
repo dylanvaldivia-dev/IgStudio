@@ -1,13 +1,35 @@
-<div class="border border-neutral rounded-xl p-8">
-  <img src="gift.svg" alt="" class="w-16 h-16" />
-  <h3 class="text-2xl text-white mt-4">98% Success Rate</h3>
+---
+const card=[
+  {
+    rate:"98% rate",
+    paragraph:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer.',
+    image:'gift.svg'
+  },
+  {
+    rate:"100% rate",
+    paragraph:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer.',
+    image:'gift.svg'
+  },
+  {
+    rate:"96% rate",
+    paragraph:'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer.',
+    image:'gift.svg'
+  }
+]
+---
+{
+  card.map(({rate,paragraph,image})=>(
+  <div class="border border-neutral rounded-xl p-8">
+  <img src={image} alt="" class="w-16 h-16" />
+  <h3 class="text-2xl text-white mt-4">{rate}</h3>
   <p class="text-neutral mb-12 mt-8">
-    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-    Velit officia consequatduis enim velit mollit Exer.
+    {paragraph}
   </p>
   <a
     href="#"
     class="bg-primary ml-auto text-black px-6 py-3 rounded-lg font-bold transition duration-700 inline-block hover:scale-125"
-    >Read More</a
-  >
+    >Read More</a>
 </div>
+  ))
+}
+
