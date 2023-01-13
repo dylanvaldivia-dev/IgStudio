@@ -1,0 +1,50 @@
+---
+import Container from "./Container.astro";
+---
+
+<Container>
+  <section class="grid grid-cols-2 mt-40 gap-y-10 gap-x-2 pb-32">
+    <div class="my-auto">
+      <h2 class="text-5xl text-white">
+        You don't have to <span class="font-black">Fight them Alone.</span>
+      </h2>
+      <p class="text-neutral mt-12">
+        Lorem ipsum dolor sit amet consectetur adipiscing elit blandit,
+        curabitur sodales conubia ut inceptos faucibus himenaeos tortor eget,
+        hac massa gravida arcu interdum proin curae.
+      </p>
+      <form
+        action=""
+        class="flex flex-row items-center gap-x-4 rounded-full mt-8"
+      >
+        <div
+          class="bg-dark px-4 py-3 focus-within:border-transparent rounded-lg"
+        >
+          <input
+            type="text"
+            placeholder="✉ Enter your email "
+            class="text-white bg-transparent"
+          />
+        </div>
+        <div>
+          <button
+            type="submit"
+            class="bg-primary ml-auto text-black px-6 py-3 rounded-lg font-bold transition duration-700 hover:scale-125"
+            >Lets Talk</button
+          >
+        </div>
+      </form>
+    </div>
+    <div class="ml-auto flex flex-row relative">
+      <img
+        src="jack.webp"
+        alt=""
+        class="aspect-[468/545] z-20 w-[468px] h-[469]"
+      />
+      <div
+        class="w-[400px] h-[400px] bg-primary filter blur-[100px] absolute bottom-[60px] z-10"
+      >
+      </div>
+    </div>
+  </section>
+</Container>
