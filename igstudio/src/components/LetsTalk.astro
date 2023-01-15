@@ -3,7 +3,7 @@ import Container from "./Container.astro";
 ---
 
 <Container>
-  <section class="grid grid-cols-2 mt-40 gap-y-10 gap-x-2 pb-32">
+  <section class="grid grid-cols-1 lg:grid-cols-2 mt-40 gap-y-10 gap-x-2 pb-32">
     <div class="my-auto">
       <h2 class="text-5xl text-white">
         You don't have to <span class="font-black">Fight them Alone.</span>
@@ -15,7 +15,7 @@ import Container from "./Container.astro";
       </p>
       <form
         action=""
-        class="flex flex-row items-center gap-x-4 rounded-full mt-8"
+        class="flex flex-col md:flex-row items-center gap-4 rounded-full mt-8"
       >
         <div
           class="bg-dark px-4 py-3 focus-within:border-transparent rounded-lg"
@@ -35,16 +35,21 @@ import Container from "./Container.astro";
         </div>
       </form>
     </div>
-    <div class="ml-auto flex flex-row relative">
-      <img
+    <div class="mx-auto lg:ml-auto ">
+
+
+      <div class="flex flex-row items-center">
+        <img
         src="jack.webp"
         alt=""
-        class="aspect-[468/545] z-20 w-[468px] h-[469]"
+        class="aspect-[468/545] w-[468px] h-[469] z-10"
       />
       <div
-        class="w-[400px] h-[400px] bg-primary filter blur-[100px] absolute bottom-[60px] z-10"
-      >
+      class="w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-primary filter absolute blur-[100px]" 
+    >
+  </div>
       </div>
+
     </div>
   </section>
 </Container>
